@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<body>
+<h1>SHOES AND FURNITURE POST SHOW HERE 101</h1>
+<% shoes.forEach(function(s){ %>
+    <ul>
+    <li>
+     <a href='/posts/new'> <%= s.subject %></a>
+    </li>
+    <% }) %>    
+        <%- include('../partials/footer') %>

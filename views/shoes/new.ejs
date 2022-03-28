@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+</head>
+<body>
+    <h2>NEW POST:</h2>
+<form action="/shoes" method="POST">
+  <label>Subject:
+    <input type="text" name="subject">
+  </label><br>
+  <label>Body:
+    <input type="text" name="body">
+  </label><br>
+  <input type="submit" value="POST">
+</form>
+</body>
+</html>
+<%- include('../partials/footer') %>
