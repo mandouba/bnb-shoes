@@ -1,4 +1,23 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/addpost.css' />
+    </head>
+    <body>
+    <nav>
+        <% if (user) { %>
+        <div><a href="/shoes"style="color: white">Home</a></div>
+        <div><a href="/profile/<%= user._id %>"style="color: white">My Profile</a></div>
+        <div><a href="/shoes/new"style="color: white" >Add post</a></div>
+        <div class="logo "><img src="https://i.imgur.com/N1YQuge.png"></div>
+        <div><a href="/logout"style="color: white">LOG OUT</a></div>
+        <% } else { %>
+          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
+      </nav>
 </head>
 <body>
     <h2>NEW POST:</h2>

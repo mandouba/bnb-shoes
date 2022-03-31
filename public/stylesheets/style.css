@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black ;
 }
 
 a {
@@ -16,22 +17,54 @@ a {
   
 }
 
-.login img {
-  height: 30px;
+ img {
+   padding: 100px;
+  height: 300px;
 }
 
-#new-form *, #add-comment-form * {
-  font-size: 20px;
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
-#add-comment-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1rem;
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
-#add-comment-form input[type="submit"] {
-  width: 8rem;
-  grid-column: 2 / 3;
-  margin-bottom: 2rem;
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+.login {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

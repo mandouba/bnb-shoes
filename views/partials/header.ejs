@@ -10,7 +10,7 @@
     <nav>
         <% if (user) { %>
           <a href="/shoes">Home</a>
-          <a href="/performers/new"	>My Post</a>
+          <a href="/profile/<%= user._id %>">My Profile</a>
           <a href="/shoes/new" >Add post</a>
           <a href="/logout">LOG OUT</a>
         <% } else { %>

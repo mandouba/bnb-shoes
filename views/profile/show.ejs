@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/details.css' />
+    <link rel='stylesheet' href='/stylesheets/profile.css' />
     </head>
     <body>
     <nav>
@@ -18,17 +18,9 @@
           <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
       </nav>
-  
-  <div>SUBJECT:</div>
-  <div><%= shoe.subject %></div>
-  <div>BODY: </div>
-  <div><%= shoe.body %></div>
-</section>
-  <form action="/../shoes/<%= shoe.id %>?_method=DELETE"
-    id="delete-form" method="POST">
-    <button type="submit">delete</button>
-  </form>
-    <form action="../shoes/<%= shoe._id %>?_method=PUT" method="POST">
-      <!-- Value attribute is being set to the comment's current text -->
-      <a href="/shoes/<%=shoe._id%>/edit ">UPDATE POST</a>
-    </form>
+
+<form>
+<header><%= user.name %>'s profile </header>
+<h3>Your Post</h3>     <h3>Saved Post</h3>
+<%- include('../partials/footer') %>
+</form>
