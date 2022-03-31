@@ -10,7 +10,7 @@ router.get('/:id/edit', isLoggedIn, shoesCtrl.edit);
 router.put('/:id', isLoggedIn, shoesCtrl.update);
 router.post('/', isLoggedIn, shoesCtrl.create);
 router.delete('/:id', isLoggedIn, shoesCtrl.delete);
-
+router.post('/:id', isLoggedIn, shoesCtrl.addReading)
 
 
 module.exports = router;
