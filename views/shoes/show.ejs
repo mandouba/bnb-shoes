@@ -32,3 +32,16 @@
       <!-- Value attribute is being set to the comment's current text -->
       <a href="/shoes/<%=shoe._id%>/edit ">UPDATE POST</a>
     </form>
+
+
+
+    <h2>COMMENTS</h2>
+<form action="/shoes/<%= shoe._id %>/comments" method="POST">
+  <label>Comment:</label>
+  <textarea name="content"></textarea>
+  <input type="submit" value="Add Comment">
+</form>
+      
+
+
+    
