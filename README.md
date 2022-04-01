@@ -7,6 +7,7 @@ another.
  Deployment Link 
 ------------------------------------------------------------------------------------------------------
 https://mongoose-bnbsc.herokuapp.com
+https://trello.com/b/CC5c27Uv/socialclub
 
 Instructions
 -----------------------------------------------------------------------------------------------------
@@ -29,17 +30,21 @@ Technologies Used
 - CSS
 - HTML
 - JavaScript
-- Express.js
-
+- Express.js + EJS
+- Passport
+- Oauth
 
 Screenshots
 -----------------------------------------------------------------------------------------------------
-<img src="https://i.imgur.com/GN6Dp24.png">
 <img src="https://i.imgur.com/iegdaLm.png">  
+<img src="https://i.imgur.com/GN6Dp24.png">
 <img src="https://i.imgur.com/sNBcB8T.png">
 <img src="https://i.imgur.com/WqsQqkU.png">  
 <img src="https://i.imgur.com/k14E8Xh.png"> 
 <img src="https://i.imgur.com/XWruKzv.png"> 
+
+
+
 
 Future enhancements
 -----------------------------------------------------------------------------------------------------
