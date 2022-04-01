@@ -26,7 +26,7 @@
                     <aside class='flex-ctr '>Welcome <%= user.name %>, EXPLORE CREATIVE POST BELOW </aside>
                 
             </div>
-            <center><h1>POST BELOW</h1></center>
+            
             <div class ="posts-row ">
                 <ul>
         <% shoes.forEach(function(s){ %>
@@ -36,8 +36,11 @@
         <div class ="subjectpost"> <a href="/shoes/<%= s._id %>" class="subjectpost posts-colum"style="color: black"><%= s.subject %></a></div>
          <div class="likes posts-colum"> posted by <a href="/profile/<%= user._id %>"style="color: white"><%= user.name %></a>
         on <%= user.createdAt %> 
-         <form action="/profile" method="POST">
-            <input type="submit" value="save">
+        <!-- LikeBtn.com BEGIN -->
+<span class="likebtn-wrapper" data-theme="custom" data-icon_l="arr16-u" data-icon_d="arr16-d" data-icon_l_c_v="#1eb100" data-icon_d_c_v="#c60000" data-white_label="true" data-identifier="item_1" data-show_like_label="false" data-site_id="6245def06fd08bbd58066658"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
+              </form>
         </form>
         </div>
        </div>

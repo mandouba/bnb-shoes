@@ -5,6 +5,6 @@ const commentsCtrl = require('../controllers/comments')
 const isLoggedIn = require('../config/auth');
 
 router.post('/shoes/:id/comments', isLoggedIn, commentsCtrl.create)
-router.delete('/comments/:id', isLoggedIn, commentsCtrl.delete)
+// router.delete('/comments/:id', isLoggedIn, commentsCtrl.delete)
 
 module.exports = router;

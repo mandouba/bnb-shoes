@@ -1,4 +1,5 @@
 const Shoe = require('../models/shoe');
+const Save = require('../models/save');
 
 module.exports= {
     index,
@@ -59,6 +60,23 @@ function newShoe(req, res) {
       });
   }
 
+
+  // function show(req, res) {
+  //   Shoe.findById(req.params.id)
+  //     .populate('profile').exec(function(err, movie) {
+  //       // Performer.find({}).where('_id').nin(movie.cast) <-- Mongoose query builder
+  //       // Native MongoDB approach 
+  //       Save.find(
+  //         {_id: {$nin: shoe.cast}},
+  //         function(err, save) {
+  //           console.log(save);
+  //           res.render('shoes/show', {
+  //             title: 'shoe', shoe, save
+  //           });
+  //         }
+  //       );
+  //     });
+  // }
 //   function deleteShoe(req, res){
 //     Shoe.findByIdAndRemove(req.params.id, function(err, shoe){
 //         res.redirect('/shoes')

@@ -11,9 +11,6 @@ const commentSchema = new Schema({
     timestamps: true
 });
 
-
-
-
 const shoeSchema = new Schema ({
 
     subject: {
