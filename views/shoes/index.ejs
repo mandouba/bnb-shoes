@@ -8,11 +8,11 @@
     </head>
     <nav>
         <% if (user) { %>
-        <div><a href="/shoes"style="color: white">Home</a></div>
-        <div><a href="/profile/<%= user._id %>"style="color: white">My Profile</a></div>
-        <div><a href="/shoes/new"style="color: white" >Add post</a></div>
-        <div class="logo"><img src="https://i.imgur.com/N1YQuge.png" width="80" ></div>
-        <div><a href="/logout"style="color: white">LOG OUT</a></div>
+          <div class = "nbar"><a href="/shoes"style="color: white"><img src="https://i.imgur.com/glXHmRR.png" width="30"></div>
+        <div class = "nbar"><a href="/profile/<%= user._id %>"style="color: white">Profile</a></div>
+        <div class = "nbar"><a href="/shoes/new"style="color: white" >+ Post</a></div>
+        <div class="nbar"><img src="https://i.imgur.com/N1YQuge.png" width="80" ></div>
+        <div class = "nbar"><a href="/logout"style="color: white">LOG OUT</a></div>
         <% } else { %>
           <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>

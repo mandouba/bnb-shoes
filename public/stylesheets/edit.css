@@ -1,56 +1,342 @@
-* {
+body {
 
-    box-sizing: border-box;
-  }
+    
+  background-color: rgb(0, 0, 0);
+  color:#ffffff;
   
-  body {
-    margin: 0;
+}
+
+html {
+    font-size: 14 px;
     font-family: Helvetica;
-      height: 100vh;
-      display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 50px 1fr 30px;
-      gap: 5px;  /* specifies width of grid lines */
-  
-  }
-  img{
-    height:40px;
-    }
-  
-  nav {
-      display: flex;
-      flex-direction: row; 
-      justify-content: flex-start; 
-      align-items: center;
-      height: 50px;
-      background-color: #000000;	
-  }
-  
-  nav > div:last-child {
-      margin-left: auto;
-  }
-  
-  div {
-      margin: 10px;
-      font-size: 20px;
-      color: #000000;
-  }
-  
-  aside {
-    background-color: #ff9300;
-  }
-      
-  main {
-    background-color: #ffffff;
-  }
-      
-  .flex-ctr {
+}
+
+
+nav {
     display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center;
+    height: 50px;
+    background-color:rgb(51, 65, 94);	
+}
+.nbar { 
+  transition: all .2s ease-in-out;
+}
+
+.nbar:hover {
+  transform: scale(0.9);
+}
+nav > div:last-child {
+    margin-left: auto;
+}
+
+div {
+    margin: 20px;
+    font-size: 20px;
+    color: #fafafa;
+}
+
+body {
+  padding: 0;
+  margin: 0;
   
-  nav, footer {
-      /*grid-column: 1/3 ;*/
-      grid-column: span 2;
-  }
+  font-family: Helvetica;
+}
+
+
+
+
+form > input{
+  padding: 12px;
+  margin: 0px auto;
+  border: 1px solid #ccc;
+  color: #ddd;
+  background-color: #222;
+  border-radius: 4px;
+  display: block;
+  width: 70vw;
+}
+
+
+.bodyinput{
+  height:200px;
+  resize:none;
+  text-align: start;
+}
+
+
+
+form > input[type="submit"] {
+  max-width: 20vw;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+form > input[type="submit"]:hover {
+  background-color: #555;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+
+
+.head{
+	font-family: Helvetica;
+	font-size: 60px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+
+.wrapper {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  width: 100%;
+  font-size: 0;
+  transform: translate(-50%);
+}
+p {
+  font-family: serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  opacity: 100%;
+}
+.letter {
+  width: 44px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0;
+  font-family: helvetica;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: #eee;
+}
+.letter:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  word-break: break-all;
+  background-color: #000000;
+}
+.letter:nth-child(1):before {
+  content: "7082431659";
+  margin-top: -24px;
+  animation-name: letter1;
+  animation-duration: 1.44s;
+  animation-delay: 0.28s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter1 {
+  from {
+    margin-top: -44px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(2):before {
+  content: "5786240139";
+  margin-top: -96px;
+  animation-name: letter2;
+  animation-duration: 2.944s;
+  animation-delay: 0.08s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter2 {
+  from {
+    margin-top: -106px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(3):before {
+  content: "0732954618";
+  margin-top: -192px;
+  animation-name: letter3;
+  animation-duration: 0.5333333333s;
+  animation-delay: 0.85s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter3 {
+  from {
+    margin-top: -202px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(4):before {
+  content: "3079426158";
+  margin-top: -168px;
+  animation-name: letter4;
+  animation-duration: 0.105s;
+  animation-delay: 0.97s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter4 {
+  from {
+    margin-top: -178px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(5):before {
+  content: "7196403258";
+  margin-top: -168px;
+  animation-name: letter5;
+  animation-duration: 1.33s;
+  animation-delay: 0.62s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter5 {
+  from {
+    margin-top: -178px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(6):before {
+  content: "7293810456";
+  margin-top: -168px;
+  animation-name: letter6;
+  animation-duration: 0.63s;
+  animation-delay: 0.82s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter6 {
+  from {
+    margin-top: -178px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(7):before {
+  content: "8301629475";
+  margin-top: -192px;
+  animation-name: letter7;
+  animation-duration: 3.2s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter7 {
+  from {
+    margin-top: -202px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(8):before {
+  content: "4928078985163";
+  margin-top: -178px;
+  animation-name: letter8;
+  animation-duration: 0.9s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter8 {
+  from {
+    margin-top: -178px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(9):before {
+  content: "7463195820";
+  margin-top: -178px;
+  animation-name: letter9;
+  animation-duration: 2.345s;
+  animation-delay: 0.33s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter9 {
+  from {
+    margin-top: -178px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(10):before {
+  content: "6429017358";
+  margin-top: -192px;
+  animation-name: letter10;
+  animation-duration: 3.1288888889s;
+  animation-delay: 0.12s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter10 {
+  from {
+    margin-top: -202px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(11):before {
+  content: "8041735692";
+  margin-top: -206px;
+  animation-name: letter11;
+  animation-duration: 1.656s;
+  animation-delay: 0.54s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter11 {
+  from {
+    margin-top: -226px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(12):before {
+  content: "7084216935";
+  margin-top: -96px;
+  animation-name: letter12;
+  animation-duration: 2.56s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter12 {
+  from {
+    margin-top: -106px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}
+.letter:nth-child(13):before {
+  content: "8902743561";
+  margin-top: -96px;
+  animation-name: letter13;
+  animation-duration: 1.44s;
+  animation-delay: 0.55s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter13 {
+  from {
+    margin-top: -106px;
+ }
+  to {
+    margin-top: 44px;
+ }
+}

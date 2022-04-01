@@ -6,31 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/addpost.css' />
     </head>
-    <body>
     <nav>
-        <% if (user) { %>
-        <div><a href="/shoes"style="color: white">Home</a></div>
-        <div><a href="/profile/<%= user._id %>"style="color: white">My Profile</a></div>
-        <div><a href="/shoes/new"style="color: white" >Add post</a></div>
-        <div class="logo "><img src="https://i.imgur.com/N1YQuge.png"></div>
-        <div><a href="/logout"style="color: white">LOG OUT</a></div>
-        <% } else { %>
-          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
-      </nav>
+      <% if (user) { %>
+        <div class = "nbar"><a href="/shoes"style="color: white"><img src="https://i.imgur.com/glXHmRR.png" width="30"></div>
+      <div class = "nbar"><a href="/profile/<%= user._id %>"style="color: white">Profile</a></div>
+      <div class = "nbar"><a href="/shoes/new"style="color: white" >+ Post</a></div>
+      <div class="nbar"><img src="https://i.imgur.com/N1YQuge.png" width="80" ></div>
+      <div class = "nbar"><a href="/logout"style="color: white">LOG OUT</a></div>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
+    </nav>
 </head>
 <body>
-    <h2>NEW POST:</h2>
+    <center><h2><p class="head" style="color: white">
+      <span class="letter">C</span>
+      <span class="letter">R</span>
+      <span class="letter">E</span>
+      <span class="letter">A</span>
+      <span class="letter">T</span>
+      <span class="letter">E</span>
+      <span class="letter"> </span>
+      <span class="letter">A</span>
+      <span class="letter"> </span>
+      <span class="letter">P</span>
+      <span class="letter">O</span>
+      <span class="letter">S</span>
+      <span class="letter">T</span>
+   </p></h2></center>
 <form action="/shoes" method="POST">
-  <label>Subject:
-    <input type="text" name="subject">
-  </label><br>
-  <label>Body:
-    <input type="text" name="body">
-  </label><br>
+    <input type="text" placeholder="Subject" name="subject"><br>
+  <input type="text" class ="bodyinput" placeholder="Body" name="body"><br>
   <input type="submit" value="POST">
 </form>
 </body>
-</html>
-<%- include('../partials/footer') %>
-
