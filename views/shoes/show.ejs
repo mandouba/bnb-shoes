@@ -35,12 +35,38 @@
 
 
     <h2><a style="color: white">COMMENTS</a></h2>
-<form action="/shoes/<%= shoe._id %>/comments" method="POST">
-  <label><a style="color: white"></a>Comment:</a></label>
+
+<form action="/shoes/<%= shoe.id%>/comments" method="POST">
+  <label><a style="color: white"></a></label>
   <textarea name="content"></textarea>
   <input type="submit" value="Add Comment">
-</form>
-</body>      
+</form> 
 
-
-    
+<% if (shoe.comments.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th><a id="newcomment" style="color: white">Posted by</th></a>
+        <th><a id="newcomment" style="color: white">COMMENT</th></a>
+      	<th><a id="newcomment" style="color: white">DATE</th></a>
+      </tr>
+    </thead>
+    <tbody class="comments-section">
+      <% shoe.comments.forEach(function(c) { %>
+        <tr>
+          <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>"></td><br>
+          <td><a style="color: white"><%= c.content %></td></a>
+          <td><a style="color: white"><%= c.createdAt.toLocaleDateString() %></td></a>
+          <td>
+            
+            </form>
+            
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+<% } else { %>
+  <h3>NO COMMENTS YET</h3>
+<% } %>
+</body>    

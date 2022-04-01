@@ -1,4 +1,3 @@
-const Comment = require('../models/comment')
 const Shoe = require('../models/shoe')
 
 module.exports = {
@@ -7,16 +6,19 @@ module.exports = {
 }
 
 function create(req, res) {
-Shoe.findById(req.params.id, function(err, shoes) {
-        //console.log(req.body)
-        req.body.user = req.user._id;
-        req.body.userName = req.user.name;
-        shoes.comments.push(req.body)
-        shoes.save(function(err) {
-        res.redirect(`/shoes/${shoes._id}`);
-          });
-        });
-      }
+  // Add the user-centric info to req.body 
+  req.body.user = req.user._id;
+  req.body.userName = req.user.name;
+  req.body.userAvatar = req.user.avatar; 
+
+  Shoe.findById(req.params.id, function(err, shoe) {
+    shoe.comments.push(req.body);
+    shoe.save(function(err) {
+      res.redirect(`/shoes/${shoe._id}`);
+    });
+  });
+}
+  
 
     // function edit(req, res) {
     //     // Note the cool "dot" syntax to query on the property of a subdoc
