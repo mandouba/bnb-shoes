@@ -34,13 +34,15 @@ body {
       }
     }
   .likes{
-    text-align: right;
+    padding: 0px 0px 400px 0px;
+    text-align: left;
+    width: 300%
   }
 
   
  .container {
      margin:  20px;
-     padding: 20 px;
+     padding: 20px;
  }
  .posts { 
    margin-top: 20px;
@@ -53,7 +55,7 @@ body {
 .posts-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 width: 100%;
 }
 .posts-colum{
@@ -137,11 +139,7 @@ width: 100%;
  li {
    list-style-type: none;
  }
- #heart {
-  color: grey;  
-  font-size: 50px;
-}
+ .subjectpost {
 
-#heart.red {
-  color: red;
-}
+  width: 100%;
+ }

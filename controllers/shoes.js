@@ -8,7 +8,6 @@ module.exports= {
     delete: deleteShoe,
     edit,
     update,
-    addReading,
 
 };
 
@@ -92,14 +91,4 @@ function deleteShoe(req, res){
    {_id:req.params.id, userRecommending: req.user._id}, function(err){
       res.redirect('/shoes')
   })
-}
-
-function addReading(req, res) {
-  Shoe.findById(req.params.id, function(err, shoe) {
-    if (shoe.users.id(req.user._id)) return res.redirect('shoes/new');
-    shoe.users.push(req.user._id);
-    shoe.save(function(err) {
-      res.redirect(`/shoes/${shoe._id}`);
-    });
-  });
 }
